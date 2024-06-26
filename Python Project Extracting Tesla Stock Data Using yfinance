@@ -80,3 +80,17 @@ fig.update_layout(title="Tesla Stock Price and Revenue",
                   legend=dict(x=0.1, y=0.9))
 
 fig.show()
+
+Question 6 : GameStop Stock and Revenue Dashboard
+
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(x=gamestop_data['Date'], y=gamestop_data['Close'], name="GameStop Stock Price", line=dict(color='royalblue')))
+fig.add_trace(go.Scatter(x=gamestop_revenue['Date'], y=gamestop_revenue['Revenue'].astype(float), name="GameStop Revenue", line=dict(color='firebrick', dash='dash')))
+
+fig.update_layout(title="GameStop Stock Price and Revenue",
+                  xaxis_title="Date",
+                  yaxis_title="Value",
+                  legend=dict(x=0.1, y=0.9))
+
+fig.show()
